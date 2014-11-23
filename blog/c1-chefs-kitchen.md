@@ -1,30 +1,19 @@
-<!-- This template is in markdown, not html, so
-  it will not render beautifully when you copy and
-  paste it into your github.io site, but it will at
-  least be published. Next week you'll be creating a
-  blog template using HTML and CSS and you'll be able
-  to copy and paste the blog posts from week 1 in there
-  to make them pretty next week.
-
-  For now, please replace the title, subtitle (if desired),
-  and date with the text you would like. Markdown is pretty
-  simple, so you can just feel free to type. =) You'll want
-  to delete this chunk of a comment as well. -->
 
 
-Title
+A Better Way of Learning
 
-Subtitle
+fill my open mind
 
-Date
+Nov 23, 2014
 
-Paragraph 1
+It was just three months ago when I stumbled across the DevBootcamp website.  I decided after several years in marketing and a job I just considered a means to an end what I was excited about and frequently thinking about was becoming a programmer.  I decided to pursue that goal.  So I went to the internet to shift through the many, many resources.  Would I go back to school (to a broken educational system), utilize on-line schools, Kahn academy, etc...   The first step I took was to get an absolute beginner's book about programming to confirm my interest.   Just a few pages in the book I knew - yes!
+I want to code!  But it wasn't the right experience for me. Along with new information I was also learning some bad habits.  And I was alone.  So back to Google.  And eventutally through Quora, I found DevBootcamp.  As soon as I started reading I knew - THIS IS IT!  An immersive and substantive approach to teaching coding skills with a broad focus on the brain, emotion and how to learn, how to be an effective student while sharing the experience with lots of other students.
 
-Paragraph 2
+My take on the DBC experience is that while going about teaching absolute newbies like me to code DBC is promoting a better and healthier way to learn.  My impression is part of the DBC culture is they have dissected the current educational paradigm, sorted out the flaws and have formulated an innovative approach to teaching that focues on many facets.  How to teach, what the curriculum should be, how to prepare, motivate and realign students so they can optimize learning and expand intellectually and emotionally and have an awesome experience.
 
-Paragraph 3
+And yes I shift between the Restaurant/consumer mindset and the Table/creator mindset.  I have expectations.  I applied to DBC to begin to learn to program well but I realize it will be so much more.
 
-Add as many paragraphs as you want!!!
+I am enthusiastic and terrified about DBC.  I want to learn to code and understand a more rewarding 'thinking disposition'.  This will be an opportunity like no other I have had before.  But I'm going to own it, and do it.  And it will probably inspire me and hurt at the same time.  Bring it on DBC!
 
 
 
