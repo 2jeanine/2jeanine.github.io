@@ -1,16 +1,16 @@
-Title
+Git is Good
 
-Subtitle
+Version Control wants your data
 
-Date
+Version Control is a friendly electronic path to code management.  This easy-to-use system builds bridges betweens programmers enabling a concise and consistent exchange of ideas and work.  Connected by the internet one can create, modify, improve, share, and distribute information anywhere without the constraints of time or location. .Version control elevates learning through computer connectivity to a faster and expansive level.  The aspect that I find exciting is the ability for many to collaborate on a particular project and accelerate creativity and productivity to impact science, medicine, politics, the economy, etc...
 
-Paragraph 1
+Version control is like several chefs taking a recipe for one of the dishes for a Thanksgiving feast and deciding how they can improve it.  So they each cook, and season, and taste in their own kitchens.  Then they exchange the modified recipes and contribute them as the improved whole from the sum of the parts.
 
-Paragraph 2
+To contribute new code or review existing code you need a githb account, a repository that you name and fill with code on your own computer.  Input some code, save the data to a file, link your location to a server via a url.  Then using git add (filename), git commit -m"identiify your work", git merge push origin master you can send your code to the world through GitHub.  Fantastic!  Just be open-minded and willing to share information.
 
-Paragraph 3
+Through the enormous power of servers, git tracks changes made to code or portions of a program by maintaining a chronology of carefully and systematically arranged computer input which is converted to binary, recorded and stored in logically related data files.  These files are available (open source) for immediate or future reference.
 
-Add as many paragraphs as you want!!!
+While git is the where the action takes place Github is the socially oriented storage host that houses all the currently final versions of code and programs until someone decides to see if they can make it better or abstract it a little to see what happens.  This universal receptacle is a great system because it makes limitless the potential substantive contributions programmers can make to our worldwide community.
 
 
 
