@@ -1,11 +1,11 @@
 h1 {
-  color: green;
+  color: crimson;
   text-align: center;
   width: 50%;
   margin: auto;
 }
 h2 {
-  color: green;
+  color: crimson;
   text-align: center;
 }
 
@@ -20,4 +20,13 @@ h4 {
 .home {
   float: right;
   margin-right: 100px
+}
+
+#CR {
+  float: left;
+  width: 25%;
+  height: auto;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
