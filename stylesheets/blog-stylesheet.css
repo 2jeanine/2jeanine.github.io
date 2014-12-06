@@ -9,9 +9,14 @@ h2 {
   text-align: center;
 }
 
-p {
+p, li {
   margin-right: 100px;
   margin-left: 100px;
+}
+
+li {
+  font-size: 19px;
+  font-family: Verdana;
 }
 
 h4 {

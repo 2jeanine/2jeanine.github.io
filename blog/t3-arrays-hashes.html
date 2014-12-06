@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <a class="home" href="https://2jeanine.github.io">home</a>
+  <h1>Array and Hashes</h1>
+  <h2>data containers</h2>
+  <h4>
+  </h4>
+
+  <section>
+      <p>
+        The thrust of the Ruby programming language is that it focuses on
+        data input as objects.  Ruby instructs some of those objects to interact with other objects by defining the type of object it is and what abilities
+        or skills it posseses in the form of methods.  The intent is to take data input and store it according to its identity and function using a specific method to decide where and how the data should be arranged for later use.
+      </p>
+      <p>
+        When you are working with 'collections' of data objects you treat them differently than individual data objects by managing them inside of
+        special class of 'container' objects.  In Ruby, Arrays and Hashes dominate the container class and serve to enable large data storage.  Both create,
+        manipulate, and transform collections of data-objects. There are similarities and differences between Arrays and Hashes, and times when
+        one is better suited for a task than the other.
+      </p>
+      <p>
+        An Array is an ordered collection of data objects with a consistent,
+        consecutive numberical index which dictates how its' objects are
+        stored and retrieved.  Arrays will accept an assortment of input objects
+        such as strings, arrays, hashes, classes, true/false, etc... and will also
+        accepte single objects, integers, pairs, and clusters.  Then the data can
+        be transformed into a list.  And, interestingly, Arrays are used in the
+        design of a hash.
+      </p>
+      <p>
+        A Hash is a powerful way of storing and retrieving data in pairs.  Each
+        pair is identified as a 'key' with a corresponding 'value'.   But, unlike the
+        Array, the Hash is more restrictive.  Each key in the pair must be unique
+        in that particular Hash.  And each key must have a value and confine
+        itself as a pair.  The value of the pair, however, does not have to be unique in that Hash, and may be duplicated.  In addition, the Hash will remember the order in which the key/value pairs were inserted.  Because
+        of this key/value structure a Hash is descriptively associated with a
+        dictionary.
+      </p>
+      <p>
+        Arrays and Hashes are similar in that an Array behaves like a Hash when its' keys are objects that are consecutive integers.  And Hashes mimic Arrays because their indices can be anything.  At times one may also
+        transform into the other.  When certain operations of selection or
+        extraction are performed on pairs in a Hash you will get back an Array.
+        Such as turning a flat array ([5, 6, 7, 8]), into, a Hash ({5 => 6, 7 => 8}).
+      </p>
+      <p>
+        The hierarchy for creation of an Array and a Hash are similar but differ
+        in order of common usages:
+      </p>
+      <p>
+      CREATING AN ARRAY
+      <li>With the Array.new method</li>
+      <li>With the literal array construction (square brackets [])</li>
+      <li>With a top-level method called Array</li>
+      <li>With the specific %w(...), and %i{...}</li>
+    </p>
+      <p>
+        CREATING A HASH
+        <li>With the literal constructor (curly braces{})</li>
+        <li>With the Hash.new method</li>
+        <li>With the Hash[]method(a square bracket class of Hash)</li>
+        <li>With the top-level method called Hash</li>
+      </p>
+        <pre>
+          <code>
+            #example of an array
+            grocery_list = ["milk", "eggs", "vodka"]
+
+
+            #example of a hash
+            phone_numbers = {"Susan" => 4156873340, "Jeff" => 5301634228, "emergency" => 911}
+          </code>
+        </pre>
+      <p>
+        Both Array and Hashes are major core container classes that serve
+        objects in Ruby to organize, identitfy, distribute, and manipulate data
+        on a large scale.  Both are suited to behave as powerhouse data storage.
+  </section>
+</main>
+

@@ -11,6 +11,10 @@ p {
   color:  black;
 }
 
+code {
+  font-size: 15px;
+}
+
 .description {
   margin-left: 150px;
   width: 60%;
