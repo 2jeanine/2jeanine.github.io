@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <a class="home" href="https://2jeanine.github.io">home</a>
+  <h1>Enumerable.map</h1>
+  <h2>Interpret and depict</h2>
+  <h4>
+  </h4>
+
+  <section>
+    <p>
+      A siginificant intent when creating a Ruby class is to acquire, search through,
+      and manipulate information to convey the attributes and abiities of that class.
+      Defining classes is about containing groups of objects and using collection
+      method behaviors to properly identify (within the context of the class), and
+      transform those objects.  There are numerous Ruby collection objects and many
+      share similar characteristics which reside in modules.  Ruby collection objects
+      typically make use of the 'Enumerable' module.
+    </p>
+    <p>
+      The enumerable public instance methods provide collection classes with a variety
+      of searching methods as well as the ability to sort.  The class agrees to cooperate
+      with the enumerable by offering an 'each' method which will produce
+      sequential collections of elements.  The enumerable module then equips the class
+      with special tools for searching through and filtering collections, finding the
+      elements(s) that fulfill the search criteria.  There are many enumerable methods
+      that take the basic class 'each' method to a whole new level.  One of the most dynamic is 'enumerable.map'.
+    </p>
+    <p>
+      Enumerable.map is a specialized each method that will iterate through a whole
+      collection of objects, yield elements, and link them effectively to assist in
+      clearly defining and making use of the class.  The map method, which is also
+      callable as collect, is considered one of the most powerful and significant
+      Ruby data collection operations available.  Whatever enumerable it starts with
+      .map will always return an array the same size as the original array.  It will
+      produce elements that consist of the accumulated result of calling the code
+      block on each element in the original object.  The result is each element has been
+      run through the block and returned to its corresponding position in the original
+      array but with the return value of enumerable.map.
+    </p>
+    <div class="map_code">
+      <pre>
+        <code>
+          >> colors: = %w { green yellow brown orange gray red}
+          => ["green", "yellow", "brown", "orange", "gray", "red"]
+          colors.map {|color| color.upcase}
+          => ["GREEN", "BROWN", "ORANGE", "GRAY", "RED",]
+        </code>
+      </pre>
+    </div>
+    <p>
+      The return value of .map, and the utility of that return value is what distinguishes
+      .map from .each.  .Each returns its receiver, while .map, quite dynamically returns
+      a new objecct; a mapping of the original object in an array.  The enumerable
+      map promises to have many useful applications for containing and transforming data.
+    </p>
+
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
