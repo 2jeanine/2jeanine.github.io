@@ -46,13 +46,20 @@
     <div class="map_code">
       <pre>
         <code>
-          >> colors: = %w { green yellow brown orange gray red}
+          >> colors = %w{ green yellow brown orange gray red }
           => ["green", "yellow", "brown", "orange", "gray", "red"]
-          colors.map {|color| color.upcase}
-          => ["GREEN", "BROWN", "ORANGE", "GRAY", "RED",]
+          >> colors.map{|color| color.upcase}
+          => ["GREEN", "YELLOW", "BROWN", "ORANGE", "GRAY", "RED"]
         </code>
       </pre>
     </div>
+    <p>
+      The above code represents a variable named colors which is equal to an
+      array of strings modified by the condition %w.  %w allows you to separate the elements in the array by whitespace rather than commas or quotation marks.
+      Next you are mapping upcase on to the elements in the array colors.
+      Map returns a new array the same size and element position of the original array.
+    </p>
+
     <p>
       The return value of .map, and the utility of that return value is what distinguishes
       .map from .each.  .Each returns its receiver, while .map, quite dynamically returns
