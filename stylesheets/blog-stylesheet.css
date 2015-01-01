@@ -16,7 +16,7 @@ p, li {
 
 li {
   font-size: 19px;
-  font-family: Verdana;
+  font-family: Roboto;
 }
 
 h4 {
@@ -37,6 +37,6 @@ h4 {
   margin-bottom: 20px;
 }
 
-.map_code {
-  margin-left: 27%;
+.insert_code {
+  margin-left: 22%;
 }

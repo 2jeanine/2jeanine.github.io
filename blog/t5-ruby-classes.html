@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <a class="home" href="https://2jeanine.github.io">home</a>
+  <h1>A class about organization</h1>
+  <h2>December 30, 2014</h2>
+  <h4>
+  </h4>
+
+  <section>
+    <p>
+      The thrust of the programming language 'Ruby' is that it is object-oriented which means all language associated terminology is an object.  These objects relate to one another in some way.  This orientation lays the foundation for a solid provision for data containment.  Object-oriented Ruby makes a great effort to supply the tools to store and organize data and save time in the process.  This can be accomplished through the use of 'classes' which assist with the structure of code in programming.
+      So when a programmer has a project that requires providing information to a computer user they will often rely on 'classes' to ensure concise containment and distribution of that data.
+    </p>
+    <p>
+      Classes are at the top of the heap of objects in Ruby.  They act as the team manager.  The programmer is the team captain and the classes help the team captain select the most talented team players.  Here these team players are the 'attribute techniques' and 'methods'.  The attribute techniques are a powerful coding shortcut that have the effect of writing one or more get and/or set methods.  Under the guidance of the class understanding, the attributes support the methods, and the methods work together efficiently to optimize their abilities and maximize results.  This means the team can be smaller and get the job done better.  This is accomplished through a good balance of cohesiveness and communication.  And all of it is the intent of the creator of the Ruby programming language Yukihiro Matsumoto and his idea that programmers should have a clearer pathway to telling a computer what to do and how to do it.
+    </p>
+    <div class="insert_code">
+      <pre>
+        <code>
+      class Bear
+        attr_reader :breed, :color
+        attr_accessor :name
+
+        def initialize(breed, color, name)
+          @breed = breed
+          @color = color
+          @name = name
+        end
+
+        def bear_details
+          return "This is a #{@breed} bear, its #{"@color}, and somehow its name is #{@name}."
+        end
+      end
+
+      grb = Bear.new("Grizzly", "brown", "nice Bobo")
+      pob = Bear.new("Polar", "white", "go away Beatrice")
+      pab = Bear.new("Panda", "black and white", "no biting Ben")
+
+      p grb.bear_details
+      p pob.bear_details
+      p pab.bear_details
+        </code>
+      </pre>
+    </div>
+    <p>
+      Above is a block of code in which I have created a class for 'Bear'.  I have used two attribute techniques, 'reader', and 'accessor'.  attr_reader was selected because it has been established that we all agree what a bear and a color are and that won't change. The name of an animal is open for change because some people change there own names and some change then name of an animal so the better choice is attr_accessor which allows for modification.  I have chosen to be liberal with the use of this attribute to emphasize flexibility.  There are recognized breeds of bear and colors associated with that breed.  Generally, there are not usually names associated with class bear but sometimes people do own bears and give them names, or they are in a zoo and have been given a name.  Then using the 'initialize' method we can bundle breed, color, and name and not have to separately define a method for each.  This shortens the code necessary and makes it more readable.
+    </p>
+    <p>
+      Then I chose some variable names to access the information about the the bear breeds and provide it for the user to see.  This conveys that attr_reader provides for one of the existing class Bear breeds and its associated color.  And attr_accessor shows this particular bear of that breed and color may have a name, that can be changed.
+      Object-oriented Ruby has enabled a programmer to use his time and skills well and give the user a better experience.
+    </p>
+  </section>
+</main>
+
