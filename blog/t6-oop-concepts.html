@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <a class="home" href="https://2jeanine.github.io">home</a>
+  <h1>Inheritance 'no' Composition 'yes'!?</h1>
+  <h2>January 6, 2015</h2>
+  <h4>Jeanine Loughlin
+  </h4>
+
+  <section>
+    <p>
+      Inheritance (as it pertains to programming languages), is defined by Wikipedia, "as a way to reuse code of existing objects, or to establish a subtype from an existing object, or both".
+    </p>
+    <p>
+      In an Object-Oriented programming language like Ruby 'Inheritance' is primarily useful when defining a hierarchy of types within classes.  When you have a generic type and you would like to make some specializations or want to customize a type with code referring to the original type, an inheritance class is a good programming choice.  Inheritance is considered to be an effective tool to describe the types that make up your system.  On the plus side, using inheritance enables a programmer to reuse code, sometimes in ways not intended by the superclass.  On the downside this can be very problematic.  Because you may not want the public interface that inheritance carries with it.  In addition, inheritance makes a class less abstract, contributes more and more dependencies and starts to edge you closer to the "Danger Zone" which makes code changes difficult, and sometimes impossible.
+    </p>
+    <div class="insert_code">
+      <pre>
+        <code>
+        class Person
+          attr_accessor :name
+
+          def initialize(name)
+            @name = name
+          end
+        end
+
+        class Artist < Person
+          attr_accessor :salary
+
+          def initialize(name, salary)
+            super(name)
+            @salary = salary
+          end
+
+          def get_paid
+            "The talented, successful artist earns: $#{@salary}."
+          end
+
+          def buy_supplies
+            "The artist needs to buy some silverpoint pencils."
+          end
+        end
+
+        class Painter < Artist
+          def paint_canvas
+            "The artist #{@name} is in the studio painting today."
+          end
+        end
+
+        class Watercolorist < Artist
+          def paint_canvas
+            "#{@name} is testing new colors and painting."
+          end
+        end
+        </code>
+      </pre>
+    </div>
+    <p>
+      Composition as defined by Wikipedia, "as a technique by which classes may achieve polymorphic behavior and reuse code by containing other classes that implement the desired fucntionality instead of through inheritance".
+    </p>
+    <p>
+      In the dynamic Object Oriented Ruby, 'Composition' has the advantage of being easy to implement and easy to understand.  Using composition, a programmer is able to compose many objects in one place. Then the work can be delegated.  Unlike inheritance, composition doesn't affect the class public interface, not does it require fitting into the hierarchy.  What it does is call methods on a private object.  So if a programmer wants to reuse some shared logic he/she an simply put that into a class, create an object of that class, and call its methods.  The downside is that with the use of composition more dependencies may result from the more verbose creation of method calls on another object and these objects can make testing awkward and difficult.
+    </p>
+    <div class="insert_code">
+      <pre>
+        <code>
+          class Painting
+            def initialize(person)
+              @person = person
+            end
+
+            def paint_canvas
+              "The artist #{@person.name} is testing some new colors and painting."
+            end
+          end
+
+          class Painter < Artist
+            def paint_canvas
+              Painting.new(self).paint_canvas
+            end
+          end
+
+
+
+      artist = Artist.new("Guinivere", $100000)
+      p artist.name
+      p artist.get_paid
+      p artist.buy_supplies
+      puts
+      water_colorist = Watercolorist.new("Errol", $50000)
+      p water_colorist.name
+      p water_colorist.paint_canvas
+      p water_colorist.get_paid
+      p water_colorist.buy_supplies
+      puts
+      painter = Painter.new("Banana", $100000000)
+      p painter.name
+      p painter.paint_canvas
+      p painter.get_paid
+      p painter.buy_supplies
+
+      "Guinivere"
+      "The talented, successful artist earns: $100000."
+      "The artist needs to buy some silverpoint pencils."
+
+      "Errol"
+      "Errol is testing new colors and painting."
+      "The talented, successful artist earns: $50000."
+      "The artist needs to buy some silverpoint pencils."
+
+      "Banana"
+      "The artist Banana is testing some new colors and painting."
+      "The talented, successful artist earns: $100000000."
+      "The artist needs to buy some silverpoint pencils."
+          </code>
+      </pre>
+    </div>
+    <p>
+      So in the end we see that both inheritance and composition have good uses and inherent problems and should be used carefully in Ruby.  Inheritance can bring issues and risks while composition brings the baggage of complexity.
+    </p>
+
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
