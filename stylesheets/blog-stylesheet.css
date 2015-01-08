@@ -10,8 +10,8 @@ h2 {
 }
 
 p, li {
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 90px;
+  margin-left: 75px;
 }
 
 li {
@@ -38,5 +38,5 @@ h4 {
 }
 
 .insert_code {
-  margin-left: 22%;
+  margin-left: 28%;
 }
