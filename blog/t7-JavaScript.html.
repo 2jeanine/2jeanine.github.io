@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <a class="home" href="https://2jeanine.github.io">home</a>
+  <h1>The FizzBuzz Loop</h1>
+  <h2>January 16, 2015</h2>
+  <h4>Jeanine Loughlin</h4>
+
+  <section>
+    <p>
+      You know, prior to devbootcamp I had NO previous programming experience.  None, nothing, zip,
+      zero, zilch.  My programming instruction began six months ago when I bought a Beginner's Guide to Python Programming.  I spent just a few weeks with it when I realized how much I wanted to learn
+      more and that this wasn't the learning experience I would benefit the most from.  So I went on the
+      internet and looked for code schools, and other resources that taught programming.  I also looked
+      into the brick and mortar schools.  And then as I was following link after link I stumbled on a blog
+      on Quora about the intensive and immersive curriculum offered by Devbootcamp.  What I found so compelling was the emphasis and approach to "learning to learn" correctly and that it involved not
+      just a commitement to academic and intellect growth but emotional development.  This seemed like
+      such a simple, yet astounding idea.  That as all of you learns, all of you grows.  So here I am learning painfully quickly and painfully slowly because of my lack of any kind of foundation.  But that means
+      as a blank slate I think I have the opportunity to be molded into a competent programmer.  And seven weeks in I now do have a point of reference.  After beginning to learn about the beauty of the Ruby
+      programming language we have transitioned into JavaScript.  And I can see differences, and make observations about the various distincitions based on my fledgling comprehension.  So here goes.  A
+      little bit about loops and the code for <a href ="http://blog.codinghorror.com/why-cant-programmers-program/">FizzBuzz</a>.
+      </p>
+
+      <div class="insert_code">
+      <pre>
+        <code>
+                      FizzBuzz
+            numbers = (1..100).to_a
+            numbers.each do |number|
+              if number % 3 == 0 && number % 5 == 0
+                puts "fizzbuzz"
+              elsif number % 3 == 0
+                puts "fizz"
+              elsif number % 5 == 0
+                puts "buzz"
+              else
+                puts number
+              end
+            end
+        </code>
+      </pre>
+    </div>
+    <div class="insert_code">
+      <pre>
+        <code>
+                        Fizzbuzz
+             for (var number=1; number<=100; number++) {
+                if (number %15 == 0)
+                  console.log("FizzBuzz");
+                else if (number %3 == 0)
+                  console.log("Fizz");
+                else if (number %5 == 0)
+                  console.log("Buzz");
+                else
+                  console.log(number);
+                }
+        </code>
+      </pre>
+    </div>
+    </p>
+    <p>
+        Click on the underlined "FizzBuzz" above for a link to a blog that was my introduction to the
+        relevance of the code block FizzBuzz as a interview challenge for programmers and its association
+        with a UK children's game.  After I read the blog I went to Wikipedia for additional information.  I
+        found an example of the code but it involved more code structure than I was familiar with or capable of executing.  So I set about building the code based on my learning to date.  Since I only
+        had 3 weeks of Ruby learning the first example represents what I was able to produce.  It is a concise, and basic if, elsif, else construct that enables a block of code to repeat itself over and over until a condition is met.  It runs as long as the need for the code remains 'true'.  Once the code goes over all numbers and
+        accomplished its task, and the condition for its need is now false, the code stops.  The first line begins with creating a varirable numbers and giving it a value of a range of numbers from 1 to 100.
+        Because of what will takes place next the range of numbers must be converted to an array for
+        execution.  The second line is a line of code that sets in place the iteration process by instructing the
+        code to go through 'each' number from 1 to 100 and stop at 100.  This next few lines begin the looping and selection of which of the next four possibilities to execute.  The displayed result will depend on which numbers are evenly divisible by 3, 5, and 15, and the output will be one of three words. Or else just the number itself if not divisible evenly.
+    </p>
+    <p>
+      The second example of FizzBuzz is standard code configuration of another programming language
+      called JavaScript.  As with the Ruby example, JavaScript also utilizes an iteration process that loops,
+      or repeats the same block of code on the numbers from 1 to 100.  As you look at both blocks of
+      code the similarities immediately stand out.  The general structure of the inner blocks with the if loop
+      in both languages are almost the same except for the slight deviation in spelling.  The Ruby loop uses
+      an if, elsif, else contruct while JavaScript uses a barely different if, else if, else construct.  A slight
+      spelling difference.  Otherwise they do the same thing with identical results.  But it is the first two lines
+      of code where the contrast is apparent.  Ruby implies number is a variable based on standard practice while JavaScript clarifies using 'var' the number is a variable.  Then Javascript has a language standard three part code block that is enclosed in parantheses.  In the short time I have spent with JavaScript I
+      have become aware of the frequency of punctutation to enclose lines or blocks of code with semi-colons, braces, commas, etc...  Whereas, Ruby is more language based with less use of punctuation barriers.
+      Ruby still employs some punctutaion for code differentiation but not to the extent of JavaScript.
+    </p>
+    <p>
+      In conclusion, I will have more to say about JavaScript in the future.  But after just 5 days I have barely begun my understanding of its complexity and nuances.  And I am just a little further in a long journey
+      to properly understand and practice the features and details of the programming language Ruby.  There
+      is so much more to learn.  And whoever came up with the word FizzBuzz, I think its great.
+    </P>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
