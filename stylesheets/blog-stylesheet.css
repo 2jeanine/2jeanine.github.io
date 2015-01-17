@@ -40,3 +40,10 @@ h4 {
 .insert_code {
   margin-left: 28%;
 }
+
+#smmc_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
