@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <a class="home" href="https://2jeanine.github.io">home</a>
+  <h1>SQL Injection - entry field left open</h1>
+  <h2>January 22, 2015</h2>
+  <h4>Jeanine Loughlin</h4>
+
+  <section>
+    <p>
+      SQL injection is a code injection technique that takes advantage of a website vulnerability to gain access or hack into a website.  SQL injection is used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker). A SQL injection takes what the website believes is a benign or harmless one-way customer service application and converts it into a revolving door.
+      It is an intentional attack via the internet on a particular website. The attack consists of insertion or "injection" of an SQL query via the input data from the client to the application. It is enabled when the target website has left some unintentional accessway to private and valuable data.  A successful SQL injection exploit can read sensitive data from the database such as what recently occured again at Sony.  The SQL code probes about until it finds a way in.  Once inside the attacker can chose to modify the data inside a database (Insert/Update/Delete), or execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to effect the execution of predefined SQL commands.
+      An SQL injection attacker can run amok once they have breeched the sensitive and valuable information belonging to an individual, coporation, govenernmental organization, etc...  They may have a particular intent or many, such as a malicious desire to spoof identity, tamper with existing data, cause repudiation issues such as voiding transactions or changing balances, allow the complete disclosure of all data on the system, destroy the data or make it otherwise unavailable, and become administrators of the database server.  This is a more and more frequent occurence of cyberspace
+
+    </p>
+    <p>
+      The SQl injection driven attack often gains entry because older, nonvigilant targets may think they have locked the
+      front door.  But have, unknowingly, inadvertently, left a window unlocked or wide open.
+      SQL Injection is very common with PHP and ASP applications due to the prevalence of older functional interfaces.
+      PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language. As of January 2013, PHP was installed on more than 240 million websites (39% of those sampled) and 2.1 million web servers.  An Application Service Provider (ASP) is a business providing computer-based services to customers over a network; such as access to a particular software application ( like customer relationship management) using a standard protocol (such as HTTP).  So if you have 240 million targets, odds are pretty good that you will be capable of gaining access if you understand how to initiate an SQL injection attack
+    </p>
+    <p>
+      The severity of SQL Injection attacks is only limited by the attacker’s skill and imagination, and to a lesser extent, defense in depth countermeasures, such as low privilege connections to the database server and so on. In general, consider SQL Injection a high impact severity.  But what exactly is an SQL injection attack?
+    </p>
+    <p>
+      SQL injection is a technique used to take advantage of non-validated input vulnerabilities to pass SQL commands through a Web application for execution by a backend database. Attackers take advantage of the fact that programmers often chain together SQL commands with user-provided parameters, and can therefore embed SQL commands inside these parameters. The result is that the attacker can execute arbitrary SQL queries and/or commands on the backend database server through the Web application.
+    <p>
+      Databases are fundamental components of Web applications. Databases enable Web applications to store data, preferences and content elements. Using SQL, Web applications interact with databases to dynamically build customized data views for each user. A common example is a Web application that manages products. In one of the Web application's dynamic pages (such as ASP), users are able to enter a product identifier and view the product name and description. The request sent to the database to retrieve the product's name and description is implemented by the following SQL statement.
+    </p>
+    <p>
+      <div class="insert code">
+        <pre>
+          <code>
+            SELECT ProductName, ProductDescription
+            FROM Products
+            WHERE ProductNumber = ProductNumber
+          </code>
+          </pre>
+        </div>
+    </p>
+    <p>
+      Typically, Web applications use string queries, where the string contains both the query itself and its parameters. The string is built using server-side script languages such as ASP, JSP and CGI, and is then sent to the database server as a single SQL statement. The following example demonstrates an ASP code that generates a SQL query.
+    </p>
+    <p>
+    <div class="insert code">
+        <pre>
+          <code>
+            ql_query= "
+            ELECT ProductName, ProductDescription
+            FROM Products
+            WHERE ProductNumber = " & Request.QueryString("ProductID")
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        The call Request.QueryString("ProductID") extracts the value of the Web form variable ProductID so that it can be appended as the SELECT condition.  When a user enters the following URL:
+        </p>
+        <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            http://www.mydomain.com/products/products.asp?productid=123
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        The corresponding SQL query is executed:
+      </p>
+      <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            SELECT ProductName, ProductDescription
+            FROM Products
+            WHERE ProductNumber = 123
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        An attacker may abuse the fact that the ProductID parameter is passed to the database without sufficient validation. The attacker can manipulate the parameter's value to build malicious SQL statements. For example, setting the value "123 OR 1=1" to the ProductID variable results in the following URL:
+      </p>
+        <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            http://www.mydomain.com/products/products.asp?productid=123 or 1=1
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        The corresponding SQL Statement is:
+      </p>
+      <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            SELECT ProductName, Product Description
+            FROM Products
+            WHERE ProductNumber = 123 OR 1=1
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        This condition would always be true and all ProductName and ProductDescription pairs are returned. The attacker can manipulate the application even further by inserting malicious commands. For example, an attacker can request the following URL:
+      </p>
+      <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            http://www.mydomain.com/products/products.asp?productid=123; DROP
+            TABLE Products
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        In this example the semicolon is used to pass the database server multiple statements in a single execution. The second statement is "DROP TABLE Products" which causes SQL Server to delete the entire Products table.
+
+        An attacker may use SQL injection to retrieve data from other tables as well. This can be done using the SQL UNION SELECT statement. The UNION SELECT statement allows the chaining of two separate SQL SELECT queries that have nothing in common. For example, consider the following SQL query:
+      </p>
+      <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            SELECT ProductName, ProductDescription
+            FROM Products
+            WHERE ProductID = '123' UNION SELECT Username, Password FROM Users;
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        The result of this query is a table with two columns, containing the results of the first and second queries, respectively. An attacker may use this type of SQL injection by requesting the following URL:
+      </p>
+      <p>
+        <div class="insert code">
+        <pre>
+          <code>
+            http://www.mydomain.com/products/products.asp?productid=123 UNION
+            SELECT user-name, password FROM USERS
+          </code>
+          </pre>
+        </div>
+      </p>
+      <p>
+        The security model used by many Web applications assumes that an SQL query is a trusted command. This enables attackers to exploit SQL queries to circumvent access controls, authentication and authorization checks. In some instances, SQL queries may allow access to host operating system level commands. This can be done using stored procedures. Stored procedures are SQL procedures usually bundled with the database server. For example, the extended stored procedure xp_cmdshell executes operating system commands in the context of a Microsoft SQL Server. Using the same example, the attacker can set the value of ProductID to be "123;EXEC master..xp_cmdshell dir--", which returns the list of files in the current directory of the SQL Server process.
+      </p>
+      <p>
+        PREVENTION
+      </p>
+      <p>
+        The most common way of detecting SQL injection attacks is by looking for SQL signatures in the incoming HTTP stream. For example, looking for SQL commands such as UNION, SELECT or xp_. The problem with this approach is the very high rate of false positives. Most SQL commands are legitimate words that could normally appear in the incoming HTTP stream. This will eventually case the user to either disable or ignore any SQL alert reported. In order to overcome this problem to some extent, the product must learn where it should and shouldn't expect SQL signatures to appear. The ability to discern parameter values from the entire HTTP request and the ability to handle various encoding scenarios are a must in this case.  Websites must be vigilant and monitor SQL communication.  And be aware of all allowed SQL queries. Then determine what preventative measures could be initiated to thwart an SQL injection attack. If the SQL stream is monitored anomalies on the SQL stream can be detected.  There are companies that offer such services They will  monitor a user's activity over time to correlate various anomalies generated by the same user or users and hopefully
+        intercept or prevent an SQL injection.
+      </p>
+
+
+
+
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+
