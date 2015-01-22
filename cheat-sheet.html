@@ -3,18 +3,100 @@
   <title></title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/blog-stylesheet.css">
 </head>
 
 <body>
   <div id="header">
-    <h1></h1>
-    <h4>ltttleheader</h4>
-    <h4>littleheader</h4>
+    <h1>Ruby - Beginning notes about Arrays and Hashes</h1>
+    <h2>Devbootcamp notes</h4>
+    <h4>by Jeanine Loughlin and David Vaynshteyn</h4>
   </div>
   <div id="middlebox">
-    <p> lotsa words</p>
-    <p> lotsa words</p>
-    <p> lotsa words</p>
-    <p> lotsa words</p>
+    <p>
+      ARRAYS are ordered, integer-indexed collections of any object.  Array indexing starts at 0.  The objects in an array
+      are counted from a left to right index starting at 0.  The first object is at index 0, second object is at index 1.
+      You can also count array objects from right to left using a negative number index starting at -1 (no zero.)
+      A new array can be created by using the literal constructor []. Arrays can contain different types of objects. For example, an array can contain an Integer, a String and a Float or any variation of these objects/elements.  The word object  is indicative of the thrust of the Ruby programming language and object orientation.  Everything in Ruby is an
+      object.  The objects in Ruby Arrays are generally associated with data containment and relational data.  Here are some examples of the standard structure of simple Ruby arrays.
+    </p>
+    <div class="insert code">
+      <pre>
+        <code>
+          empty_array = Array.new(10) #=> I have created a new Array that will hold ten food types.   My parameter is (10).
+          puts empty_array.length     #=> this will tell you 10 (The array has capacity for 10 objects).
+
+          #=> below is an example of the foods array with ten food objects in a string literal format.
+
+          foods = ["pizza", "watermelon", "avacado", "oysters", "crackers", "bananas", "bread", "pears", "yogurt", "rice"]
+          puts foods #=> will show all ten foods in the array in irb or other display console
+
+          birds = Array.new(5, "parrot") #=>  You can assign a value to the object(element) you want in your array
+          #=>  will display ["parrot", "parrot", "parrot", "parrot", "parrot",]  #=> computer displays 5x the zeroth index.
+        </code>
+      </pre>
+    </div>
+    <p>
+      There are many more uses for Arrays.  It depends on what types of objects I intend to store in them.  Or if I
+      need to add more, delete some, or plan to use them later. Numerous methods using dot notation can change
+      what an array holds or can extract data and return it various forms depending on what I am trying to do.
+      These examples will appear as code below.
+      <ol>
+        <li>You can also use a block with a new array, and populate each element with what the block evaluates to.</li>
+        <li>There is another method of Array, [].</li>
+        <li>One more form of array creation using [] but filling array with selected elements.</li>
+        <li>.Flatten returns a new array that is a one-dimensional flattening of this array (recursively). That is, for every element that is an array, extract its elements into the new array. The optional level argument determines the level of recursion to flatten.</li>
+    </ol>
+    </p>
+    <div class= "insert code">
+      <pre>
+        <code>
+          numbers = Array.new(10) { |e| e = e * 5 } #=> will result in this array [0, 5, 10, 15, 20, 25, 30, 35, 40, 45]
+          numbers = Array.[](8, 9, 10, 11, 12) #=> [8, 9, 10, 11, 12] using the [] to indicate empty, new array.
+          numbers = Array[1, 2, 3, 4, 5] #=> [1, 2, 3, 4, 5] returns my new array with the elements I chose.
+
+          numbers = [[1, 2, 3], [4, 5, 6, [7, 8]], 9, 10] #nested arrays are an array having another array or more.
+                                                          #There may be outer and inner arrays inside outer and inner brackets.
+                                                          #Thus, inner arrays inside outer arrays, next to other arrays.
+          numbers.flatten   #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  #.flatten takes a nested array(s) and and returns one array.
+                                                                #all elements are in one set of brackets seprarated by commas.
+        </code>
+      </pre>
+    </div>
+
+    <p>
+      HASHES are great for data containment.  Sometimes arrays are the better choice, other times hashes.  Which to choose!
+      Hashes are different than arrays.  Hash is a dictionary-like collection of unique keys and their values. Also called associative arrays, they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type.  Hashes enumerate their values in the order that the corresponding keys were inserted.  Hashes can
+      be created using their implicit form.  Each hash contains pairs of dependent information know as key/value.  Each
+      hash contains only of each key element type which is why it is called unique.  See first hash for pets.  I can only have 1 fuzzy.  But I can have another key with the same value.  So the fuzzy key has a value of 6 (age) and the slate key can also have a value of 6 (age).  Hashes, like arrays, offer syntax and structure variations depending on what I need to do, or code I will build.  A Hash can also be created through its ::new method:
+    </p>
+    <p>
+      <ol>
+      <li>This hash contains keys/value pairs.  The key is the pet name (a string), and the value is the pets age.</li>
+      <li>Hashes allow an alternate syntax form when your keys are always symbols. See second line of code below</li>
+      <li>Third line of code is a syntax option for second line</li>
+      <li>Each key in a hash can be accessed (It seems like I'm using an array to access the value of the hash).</li>
+      <li>A Hash can also be created through its ::new method:                          See code below on line 5and 6</li>
+    </p>
+    </p>
+    <div class= "insert code">
+      <pre>
+        <code>
+          pets = { "fuzzy" => 6, "slate" => 6, "percy" => 2, "jaws" => 11 }
+          options = { :shoe_size => 6, :shoe_color => "red", :shoe_style => "mule", :shoe_designer => "Prada" } #=>
+          options = options = { shoe_size: 6, shoe_color: "red", shoe_style: "mule", shoe_designer: "Prada" } (no #=>) using a :
+          options[:shoe_size]  # => 6
+          scores = Hash.new
+          scores["student1"] = 100
+
+          books         = {}
+          books[:matz]  = "The Ruby Language"
+          books[:black] = "The Well-Grounded Rubyist"
+        </code>
+      </pre>
+    </div>
+    <p>
+      Hashes have a default value that is returned when accessing keys that do not exist in the hash. If no default is set nil is used. You can set the default value by sending it as an argument to ::new.  Hashes are versatile and can be used to store, arrange, manipulate, reference, and access data.  Hashes are also commonly used as a way to have named parameters in functions. Note that no brackets are used above for code on line 7-9. If a hash is the last argument on a method call, no braces are needed, thus creating a really clean interface:  This is just a bit about Arrays and Hashes
+    </p>
   </div>
 </body>
