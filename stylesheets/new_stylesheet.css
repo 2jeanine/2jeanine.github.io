@@ -14,7 +14,7 @@ body {
 #my_name_box {
   background-color: gray;
   width: 85%;
-  height: 260px;
+  height: 220px;
   margin: auto;
   margin-top: 40px;
   padding-top: 3%;
@@ -25,7 +25,11 @@ body {
   color: white;
   font-size: 65px;
   margin-left: 7%;
+}
 
+#my_name_box h3 {
+  margin-left: 8%;
+  margin-top: -60px;
 }
 
 #last_name {
