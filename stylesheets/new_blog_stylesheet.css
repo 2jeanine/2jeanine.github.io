@@ -1,6 +1,7 @@
 body {
   margin-left: 30px;
-  font-family: Papyrus
+  font-family: Papyrus;
+  background-color: rgba(255, 203, 0, 0.29);
 }
 
 h1 {
